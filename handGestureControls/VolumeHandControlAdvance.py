@@ -36,13 +36,27 @@ while True:
 
     # Find hand
     img = detector.findHands(img)
-    lmList = detector.findPosition(img, draw=False)
+    lmList, bbox = detector.findPosition(img, draw=False)
 
     cTime = time.time()
     fps = 1 / (cTime - pTime)
     pTime = cTime
 
     if len(lmList) != 0:
+        # Filter based on size
+        print(bbox)
+        # Find distance between index and thumb
+
+        # Convert Volume
+
+        # Reduce resolution to make it smoother
+
+        # Check finger up
+
+        # if pinky is down set volume
+
+        # drawings
+
         # thumb coords
         x1, y1 = lmList[4][1], lmList[4][2]
         # index coords
